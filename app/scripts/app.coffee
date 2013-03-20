@@ -1,3 +1,2 @@
-define [], ->
-  "use strict"
-  "'Allo 'Allo!"
+define ['namespaces', 'shader'], (App) ->
+  App

@@ -1,15 +1,16 @@
 require.config
   paths:
+    app: "app"
     jquery: "../components/jquery/jquery"
-    bootstrap: "vendor/bootstrap"
+    webgl_utils: "vendor/webgl-utils"
+    webgl_debug: "vendor/webgl-debug"
+    cuon_utils: "vendor/cuon-utils"
+    triangle: "triangle"
 
   shim:
     bootstrap:
       deps: ["jquery"]
       exports: "jquery"
 
-require ["app", "jquery"], (app, $) ->
-  "use strict"
-
-  console.log app
-  console.log "Running jQuery %s", $().jquery
+require ["triangle", "jquery", "text!shaders/vertex.glsl"], (App, $, vertex) ->
+  App.run()

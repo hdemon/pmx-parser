@@ -10,8 +10,13 @@
     </head>
     <body>
         <div class="container">
-
+            <canvas id="webgl" width="400" height="400">
+                Canvasをサポートしているブラウザを使用してください。
+            </canvas>
         </div>
+
+        <script id="vertex-glsl" src="scripts/shaders/vertex.glsl" type="x-shader/x-vertex"></script>
+        <script id="fragment-glsl" src="scripts/shaders/fragment.glsl" type="x-shader/x-fragment"></script>
 
         <!-- build:js scripts/main.js -->
         <script data-main="scripts/main" src="components/requirejs/require.js"></script>
